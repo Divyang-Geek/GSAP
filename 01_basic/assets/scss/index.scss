@@ -98,3 +98,15 @@ img {
         @extend .circle6;
     }
 }
+
+.box8 {
+    @extend .box7;
+
+    .pitbullDog8 {
+        width: 25rem;
+    }
+
+    .circle8 {
+        @extend .circle7;
+    }
+}

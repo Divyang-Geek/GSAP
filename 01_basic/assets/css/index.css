@@ -69,7 +69,7 @@ img {
   width: 25rem;
 }
 
-.box4, .box5, .box6, .box7 {
+.box4, .box5, .box6, .box7, .box8 {
   background-color: antiquewhite;
   margin-top: 6.25rem;
   display: -webkit-box;
@@ -82,8 +82,12 @@ img {
   position: relative;
   gap: 3rem;
 }
-.box4 .circle4, .box5 .circle4, .box6 .circle4, .box7 .circle4, .box5 .circle5, .box6 .circle5, .box7 .circle5, .box6 .circle6, .box7 .circle6, .box7 .circle7 {
+.box4 .circle4, .box5 .circle4, .box6 .circle4, .box7 .circle4, .box8 .circle4, .box5 .circle5, .box6 .circle5, .box7 .circle5, .box8 .circle5, .box6 .circle6, .box7 .circle6, .box8 .circle6, .box7 .circle7, .box8 .circle7, .box8 .circle8 {
   width: 7.25rem;
   height: 7.25rem;
   background-color: chocolate;
+}
+
+.box8 .pitbullDog8 {
+  width: 25rem;
 }/*# sourceMappingURL=index.css.map */

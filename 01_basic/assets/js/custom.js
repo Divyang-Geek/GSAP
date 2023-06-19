@@ -109,8 +109,7 @@ gsap.to(myObject, {
         if (myObject.rotation >= 100 && myObject.rotation <= 120) {
             // console.log(myObject.rotation);
             // console.log("if = x" + myObject.x);
-
-            gsap.to(myObject, { x: 150 });
+            // gsap.to(myObject, { x: 150 });
         } else {
             gsapIcon3Change.x = 10;
             // console.log("else = x" + myObject.x);
@@ -165,11 +164,60 @@ gsap.from(circle6, { duration: 5, opacity: 0, y: "random(-200, 200)", stagger: 0
  * Box 7
  */
 
-let tl = gsap.timeline();
+let tl7 = gsap.timeline();
 let circle7 = document.querySelectorAll(".circle7");
 
-//sequenced one-after-the-other
-tl.to(circle7, { duration: 2, x: 100, backgroundColor: "blue", stagger: 0.25 }) //notice that there's no semicolon!
+tl7.set(circle7, { transformOrigin: "50%" });
+tl7.to(circle7, { duration: 2, x: 100, backgroundColor: "blue", stagger: 0.25 }) //notice that there's no semicolon!
     .to(circle7, { duration: 1, y: 150, stagger: 0.5, rotationY: 360, scaleX: 1.1 })
     .to(circle7, { duration: 2, x: 300, stagger: 0.75 })
     .to(circle7, { duration: 3, y: -150, stagger: 1, rotationX: 360 });
+
+/**
+ * Box 8
+ */
+
+const tl8 = gsap.timeline();
+const circle8 = document.querySelectorAll(".circle8");
+const pitbullDog8 = document.querySelectorAll(".pitbullDog8");
+
+tl8.to([pitbullDog8, circle8], { transformOrigin: "50%" });
+
+tl8.from(pitbullDog8, {
+    duration: 5,
+    opacity: 0,
+    scale: 0.3,
+    ease: "back",
+});
+
+tl8.to(pitbullDog8, {
+    rotate: 360,
+    ease: "linear",
+});
+
+tl8.from(circle8, {
+    duration: 10,
+    opacity: 0,
+    scale: 0.5,
+    y: 80,
+    stagger: 10 / 5,
+    rotate: 360,
+    ease: "elastic.out(1, 0.3)",
+    // delay: 1,
+});
+
+const tl8Obj = {
+    duration: 0,
+    y: 0,
+    scale: 0,
+};
+
+tl8.from(tl8Obj, {
+    duration: 5,
+    y: 80,
+    scale: 0.5,
+
+    onUpdate: function () {
+        console.log(tl8Obj.duration);
+    },
+});

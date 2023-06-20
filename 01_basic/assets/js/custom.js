@@ -184,7 +184,7 @@ const pitbullDog8 = document.querySelectorAll(".pitbullDog8");
 tl8.to([pitbullDog8, circle8], { transformOrigin: "50%" });
 
 tl8.from(pitbullDog8, {
-    duration: 5,
+    duration: 1,
     opacity: 0,
     scale: 0.3,
     ease: "back",
@@ -196,15 +196,22 @@ tl8.to(pitbullDog8, {
 });
 
 tl8.from(circle8, {
-    duration: 10,
+    duration: 1,
     opacity: 0,
     scale: 0.5,
     y: 80,
-    stagger: 10 / 5,
+    stagger: 1 / 5,
     rotate: 360,
     ease: "elastic.out(1, 0.3)",
-    // delay: 1,
 });
+
+tl8.to(
+    circle8,
+    {
+        backgroundColor: "blue",
+    },
+    "+=2"
+);
 
 const tl8Obj = {
     duration: 0,
@@ -213,11 +220,46 @@ const tl8Obj = {
 };
 
 tl8.from(tl8Obj, {
-    duration: 5,
+    duration: 2,
     y: 80,
     scale: 0.5,
 
     onUpdate: function () {
-        console.log(tl8Obj.duration);
+        // console.log(tl8Obj.duration);
     },
 });
+
+/**
+ * Box 9
+ */
+
+const bottleTl = gsap.timeline({
+    defaults: {
+        duration: 5,
+    },
+});
+
+const bottle9 = document.querySelector(".bottle9");
+const bottle9Img = document.querySelector(".bottle9_img");
+
+bottleTl.from(bottle9, {
+    xPercent: -25,
+    y: 0,
+    rotate: 45,
+    scale: 1.1,
+    ease: "power2.inOut",
+});
+
+bottleTl.set(bottle9Img, {
+    animationFillMode: "forwards",
+});
+
+bottleTl.from(
+    bottle9Img,
+    {
+        ease: "steps(179)",
+        backgroundPosition: "100% 0",
+    },
+    "-=4.75"
+);
+

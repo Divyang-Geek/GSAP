@@ -10,7 +10,7 @@ body {
 }
 
 body {
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--bs-gray-dark);
     min-height: 100vh;
 }
@@ -21,7 +21,7 @@ img {
 }
 
 .box1 {
-    --size: 6.25rem;
+    --size: 100px;
     width: var(--size);
     height: var(--size);
     background-color: var(--bs-blue);
@@ -31,14 +31,14 @@ img {
 
 .box2 {
     background-color: var(--bs-yellow);
-    margin-top: 6.25rem;
+    margin-top: 100px;
     display: flex;
     align-items: center;
-    height: 31.25rem;
+    height: 500px;
     position: relative;
 
     img {
-        width: 25rem;
+        width: 400px;
     }
 
     .gsapIcon2 {
@@ -48,29 +48,29 @@ img {
 
 .box3 {
     background-color: antiquewhite;
-    margin-top: 6.25rem;
+    margin-top: 100px;
     display: flex;
     align-items: center;
-    height: 31.25rem;
+    height: 500px;
     position: relative;
 
     img {
-        width: 25rem;
+        width: 400px;
     }
 }
 
 .box4 {
     background-color: antiquewhite;
-    margin-top: 6.25rem;
+    margin-top: 100px;
     display: flex;
     align-items: center;
-    height: 31.25rem;
+    height: 500px;
     position: relative;
-    gap: 3rem;
+    gap: 48px;
 
     .circle4 {
-        width: 7.25rem;
-        height: 7.25rem;
+        width: 116px;
+        height: 116px;
         background-color: chocolate;
     }
 }
@@ -103,7 +103,7 @@ img {
     @extend .box7;
 
     .pitbullDog8 {
-        width: 25rem;
+        width: 400px;
     }
 
     .circle8 {
@@ -114,7 +114,7 @@ img {
 .box9 {
     @extend .box8;
     height: 100vh;
-    background-color: rgb(191, 116, 82);
+    background-color: rgb(197, 91, 42);
     justify-content: center;
 
     .bottle9 {

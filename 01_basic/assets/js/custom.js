@@ -68,8 +68,8 @@ gsap.from(".gsapIcon2", gsapIcon2Change);
 
 // var gsapIcon3Change = {
 //     rotation: 0,
-//     x: "6.25rem",
-//     y: "-6.25rem",
+//     x: "100px",
+//     y: "-100px",
 //     duration: 1,
 // };
 
@@ -79,7 +79,7 @@ gsap.from(".gsapIcon2", gsapIcon2Change);
 
 // gsap.to(myObject, {
 //     duration: 5,
-//     x: "10rem",
+//     x: "160px",
 //     onUpdate: function () {
 //         // console.log(myObject.x);
 //     },
@@ -242,16 +242,16 @@ const bottleTl = gsap.timeline({
 const bottle9 = document.querySelector(".bottle9");
 const bottle9Img = document.querySelector(".bottle9_img");
 
+bottleTl.set(bottle9Img, {
+    animationFillMode: "forwards",
+});
+
 bottleTl.from(bottle9, {
     xPercent: -25,
     y: 0,
     rotate: 45,
     scale: 1.1,
     ease: "power2.inOut",
-});
-
-bottleTl.set(bottle9Img, {
-    animationFillMode: "forwards",
 });
 
 bottleTl.from(
@@ -263,3 +263,31 @@ bottleTl.from(
     "-=4.75"
 );
 
+bottleTl.addLabel("bottleLabel", "+=5");
+bottleTl.to(
+    bottle9,
+    {
+        duration: 1,
+        x: 150,
+        opacity: 0,
+        scale: 0.2,
+        ease: "slow(0.1, 0.1, false)",
+    },
+    "bottleLabel"
+);
+
+let myObj = { x: 0 };
+
+bottleTl.to(myObj, {
+    duration: 1,
+    x: 150,
+    onStart: function () {
+        console.log("Start");
+    },
+    onComplete: function () {
+        console.log("Complete");
+    },
+    onUpdate: function () {
+        console.log(myObj.x);
+    },
+});

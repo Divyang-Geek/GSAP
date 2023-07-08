@@ -11,18 +11,18 @@ body {
 }
 
 body {
-  font-size: 1rem;
+  font-size: 16px;
   color: var(--bs-gray-dark);
   min-height: 100vh;
 }
 
 img {
   max-width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .box1 {
-  --size: 6.25rem;
+  --size: 100px;
   width: var(--size);
   height: var(--size);
   background-color: var(--bs-blue);
@@ -36,18 +36,18 @@ img {
 
 .box2 {
   background-color: var(--bs-yellow);
-  margin-top: 6.25rem;
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 31.25rem;
+  height: 500px;
   position: relative;
 }
 .box2 img {
-  width: 25rem;
+  width: 400px;
 }
 .box2 .gsapIcon2 {
   position: absolute;
@@ -55,41 +55,41 @@ img {
 
 .box3 {
   background-color: antiquewhite;
-  margin-top: 6.25rem;
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 31.25rem;
+  height: 500px;
   position: relative;
 }
 .box3 img {
-  width: 25rem;
+  width: 400px;
 }
 
 .box4, .box5, .box6, .box7, .box8, .box9 {
   background-color: antiquewhite;
-  margin-top: 6.25rem;
+  margin-top: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 31.25rem;
+  height: 500px;
   position: relative;
-  gap: 3rem;
+  gap: 48px;
 }
 .box4 .circle4, .box5 .circle4, .box6 .circle4, .box7 .circle4, .box8 .circle4, .box9 .circle4, .box5 .circle5, .box6 .circle5, .box7 .circle5, .box8 .circle5, .box9 .circle5, .box6 .circle6, .box7 .circle6, .box8 .circle6, .box9 .circle6, .box7 .circle7, .box8 .circle7, .box9 .circle7, .box8 .circle8, .box9 .circle8 {
-  width: 7.25rem;
-  height: 7.25rem;
+  width: 116px;
+  height: 116px;
   background-color: chocolate;
 }
 
 .box8 .pitbullDog8, .box9 .pitbullDog8 {
-  width: 25rem;
+  width: 400px;
 }
 .box9 {
   height: 100vh;
@@ -107,4 +107,69 @@ img {
   height: 100%;
   background-size: cover;
   background-attachment: scroll;
+}
+
+.box10 {
+  height: 300px;
+  background-color: beige;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.box10 img {
+  width: 100px;
+}
+
+.box11 {
+  height: 600px;
+  background-color: #7f9ff6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.box11 .box11_bg_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.box11 .box11_inr {
+  max-width: 100%;
+  width: 1400px;
+  background-color: rgba(204, 0, 0, 0.6);
+  padding: 50px;
+  overflow: hidden;
+  position: relative;
+}
+.box11 .box11_inr * {
+  color: #fff;
+}
+.box11 .box11_inr .box11_tag {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #004d00;
+  color: #fff;
+  padding: 20px;
+}
+.box11 .box11_inr .box11_img img {
+  width: 100px;
 }/*# sourceMappingURL=index.css.map */

@@ -237,6 +237,8 @@ const bottleTl = gsap.timeline({
     defaults: {
         duration: 5,
     },
+    repeat: 2,
+    yoyo: -1,
 });
 
 const bottle9 = document.querySelector(".bottle9");
@@ -290,4 +292,93 @@ bottleTl.to(myObj, {
     onUpdate: function () {
         console.log(myObj.x);
     },
+});
+
+/**
+ * Box 10
+ */
+
+gsap.to(".box10 img", {
+    y: -150,
+    // duration: 5,
+    stagger: {
+        // each: 1,
+        amount: 5,
+        from: "edges",
+        // grid: "auto",
+        ease: "power2.inOut",
+        repeat: -1,
+        yoyo: -1,
+    },
+    // repeat: -1,
+    // yoyo: -1,
+});
+
+/**
+ * Box 11
+ */
+
+const box11Tl = gsap.timeline({
+    // defaults: {
+    //     duration: 1,
+    // },
+    duration: 1,
+    repeat: -1,
+    yoyo: -1,
+});
+const box11_bg_img = document.querySelector(".box11_bg_img");
+const box11_title = document.querySelector(".box11_inr > h2");
+const box11_desc = document.querySelector(".box11_inr > p");
+const box11_imgs = document.querySelectorAll(".box11_img img");
+const box11_tag = document.querySelector(".box11_tag");
+
+// console.log(box11_imgs);
+
+// box11_imgs.forEach((element, i) => {
+//     console.log(element.currentSrc);
+//     console.log(i);
+// });
+
+// for (let index = 0; index < box11_imgs.length; index++) {
+//     const Img = (box11_imgs[index]);
+//     console.log(Img.currentSrc);
+// }
+
+box11Tl.from(box11_bg_img, {
+    opacity: 0,
+    // duration: 2,
+    // left: 50,
+    ease: "power4.out",
+    scale: 1.2,
+});
+
+box11Tl.from(box11_title, {
+    opacity: 0,
+    // duration: 1,
+    xPercent: -50,
+    ease: "circ.out",
+});
+
+box11Tl.from(box11_desc, {
+    opacity: 0,
+    // duration: 1,
+    xPercent: -50,
+    ease: "circ.out",
+});
+
+box11Tl.from(box11_imgs, {
+    opacity: 0,
+    // duration: 1,
+    x: 50,
+    ease: "power3.inOut",
+    stagger: {
+        each: 0.25,
+    },
+});
+
+box11Tl.from(box11_tag, {
+    opacity: 0,
+    // duration: 1,
+    xPercent: 100,
+    ease: "bounce",
 });
